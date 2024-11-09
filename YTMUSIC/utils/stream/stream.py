@@ -19,7 +19,6 @@ from YTMUSIC.utils.inline import (
 )
 from YTMUSIC.utils.pastebin import YTBin
 from YTMUSIC.utils.stream.queue import put_queue, put_queue_index
-from YTMUSIC.utils.thumbnails import get_thumb
 
 
 async def stream(
