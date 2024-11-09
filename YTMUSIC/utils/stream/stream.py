@@ -109,11 +109,9 @@ async def stream(
                     "video" if video else "audio",
                     forceplay=forceplay,
                 )
-                img = await get_thumb(vidid)
                 button = stream_markup(_, vidid, chat_id)
-                run = await app.send_photo(
+                run = await app.send_text(
                     original_chat_id,
-                    photo=img,
                     caption=_["stream_1"].format(
                         f"https://t.me/{app.username}?start=info_{vidid}",
                         title[:23],
@@ -135,10 +133,9 @@ async def stream(
                 car = msg
             carbon = await Carbon.generate(car, randint(100, 10000000))
             upl = close_markup(_)
-            return await app.send_photo(
+            return await app.send_text(
                 original_chat_id,
-                photo=carbon,
-                caption=_["play_21"].format(position, link),
+                text=_["play_21"].format(position, link),
                 reply_markup=upl,
             )
     elif streamtype == "youtube":
@@ -146,7 +143,6 @@ async def stream(
         vidid = result["vidid"]
         title = (result["title"]).title()
         duration_min = result["duration_min"]
-        thumbnail = result["thumb"]
         status = True if video else None
         try:
             file_path, direct = await YouTube.download(
@@ -200,12 +196,10 @@ async def stream(
                 "video" if video else "audio",
                 forceplay=forceplay,
             )
-            img = await get_thumb(vidid)
             button = stream_markup(_, vidid, chat_id)
-            run = await app.send_photo(
+            run = await app.send_text(
                 original_chat_id,
-                photo=img,
-                caption=_["stream_1"].format(
+                text=_["stream_1"].format(
                     f"https://t.me/{app.username}?start=info_{vidid}",
                     title[:23],
                     duration_min,
@@ -321,7 +315,6 @@ async def stream(
         link = result["link"]
         vidid = result["vidid"]
         title = (result["title"]).title()
-        thumbnail = result["thumb"]
         duration_min = "Live Track"
         status = True if video else None
         if await is_active_chat(chat_id):
@@ -368,11 +361,9 @@ async def stream(
                 "video" if video else "audio",
                 forceplay=forceplay,
             )
-            img = await get_thumb(vidid)
             button = telegram_markup(_, chat_id)
-            run = await app.send_photo(
+            run = await app.send_text(
                 original_chat_id,
-                photo=img,
                 caption=_["stream_1"].format(
                     f"https://t.me/{app.username}?start=info_{vidid}",
                     title[:23],
@@ -425,10 +416,9 @@ async def stream(
                 forceplay=forceplay,
             )
             button = telegram_markup(_, chat_id)
-            run = await app.send_photo(
+            run = await app.send_text(
                 original_chat_id,
-                photo=config.STREAM_IMG_URL,
-                caption=_["stream_2"].format(user_name),
+                text=_["stream_2"].format(user_name),
                 reply_markup=InlineKeyboardMarkup(button),
             )
             db[chat_id][0]["mystic"] = run
