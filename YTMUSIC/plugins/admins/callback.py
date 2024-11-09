@@ -27,7 +27,6 @@ from YTMUSIC.utils.inline import (
     telegram_markup_timer,
 )
 from YTMUSIC.utils.stream.autoclear import auto_clean
-from YTMUSIC.utils.thumbnails import get_thumb
 from config import (
     BANNED_USERS,
     SOUNCLOUD_IMG_URL,
