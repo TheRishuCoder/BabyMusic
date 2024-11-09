@@ -35,7 +35,6 @@ from YTMUSIC.utils.exceptions import AssistantErr
 from YTMUSIC.utils.formatters import check_duration, seconds_to_min, speed_converter
 from YTMUSIC.utils.inline.play import stream_markup, telegram_markup
 from YTMUSIC.utils.stream.autoclear import auto_clean
-from YTMUSIC.utils.thumbnails import get_thumb
 from strings import get_string
 
 autoend = {}
