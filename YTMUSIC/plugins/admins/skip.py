@@ -9,7 +9,6 @@ from YTMUSIC.utils.database import get_loop
 from YTMUSIC.utils.decorators import AdminRightsCheck
 from YTMUSIC.utils.inline import close_markup, stream_markup, telegram_markup
 from YTMUSIC.utils.stream.autoclear import auto_clean
-from YTMUSIC.utils.thumbnails import get_thumb
 from config import BANNED_USERS
 
 
