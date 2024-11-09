@@ -229,10 +229,8 @@ async def del_back_playlist(client, CallbackQuery, _):
             except:
                 return await CallbackQuery.message.reply_text(_["call_6"])
             button = telegram_markup(_, chat_id)
-            img = await get_thumb(videoid)
-            run = await CallbackQuery.message.reply_photo(
-                photo=img,
-                caption=_["stream_1"].format(
+            run = await CallbackQuery.message.reply_text(
+                text=_["stream_1"].format(
                     f"https://t.me/{app.username}?start=info_{videoid}",
                     title[:23],
                     duration,
