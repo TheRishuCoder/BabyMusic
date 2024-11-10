@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardMarkup
 
 import config
 from YTMUSIC import Carbon, YouTube, app
-from YTMUSIC.core.call import BABY
+from YTMUSIC.core.call import YT
 from YTMUSIC.misc import db
 from YTMUSIC.utils.database import add_active_video_chat, is_active_chat
 from YTMUSIC.utils.exceptions import AssistantErr
