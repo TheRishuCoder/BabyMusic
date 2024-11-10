@@ -77,7 +77,7 @@ async def stream(
                     )
                 except:
                     raise AssistantErr(_["play_14"])
-                await BABY.join_call(
+                await YT.join_call(
                     chat_id,
                     original_chat_id,
                     file_path,
@@ -112,7 +112,7 @@ async def stream(
         if count == 0:
             return
         else:
-            link = await BABYBin(msg)
+            link = await YTBin(msg)
             lines = msg.count("\n")
             if lines >= 17:
                 car = os.linesep.join(msg.split(os.linesep)[:17])
@@ -160,7 +160,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await BABY.join_call(
+            await YT.join_call(
                 chat_id,
                 original_chat_id,
                 file_path,
