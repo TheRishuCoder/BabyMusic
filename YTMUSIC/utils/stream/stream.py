@@ -30,7 +30,7 @@ async def stream(
     if not result:
         return
     if forceplay:
-        await BABY.force_stop_stream(chat_id)
+        await YT.force_stop_stream(chat_id)
     if streamtype == "playlist":
         msg = f"{_['play_19']}\n\n"
         count = 0
