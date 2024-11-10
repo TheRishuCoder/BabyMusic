@@ -297,7 +297,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await BABY.stream_call(url)
+                await YT.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(_["black_9"])
                 return await app.send_message(
@@ -519,8 +519,8 @@ async def play_music(client, CallbackQuery, _):
     return await mystic.delete()
 
 
-@app.on_callback_query(filters.regex("BABYmousAdmin") & ~BANNED_USERS)
-async def SHUKLAmous_check(client, CallbackQuery):
+@app.on_callback_query(filters.regex("YTmousAdmin") & ~BANNED_USERS)
+async def YTmous_check(client, CallbackQuery):
     try:
         await CallbackQuery.answer(
             "Â» Ê€á´‡á´ á´‡Ê€á´› Ê™á´€á´„á´‹ á´›á´ á´œsá´‡Ê€ á´€á´„á´„á´á´œÉ´á´› :\n\ná´á´˜á´‡É´ Êá´á´œÊ€ É¢Ê€á´á´œá´˜ sá´‡á´›á´›ÉªÉ´É¢s.\n-> á´€á´…á´ÉªÉ´Éªsá´›Ê€á´€á´›á´Ê€s\n-> á´„ÊŸÉªá´„á´‹ á´É´ Êá´á´œÊ€ É´á´€á´á´‡\n-> á´œÉ´á´„Êœá´‡á´„á´‹ á´€É´á´É´Êá´á´á´œs á´€á´…á´ÉªÉ´ á´˜á´‡Ê€á´ÉªssÉªá´É´s.",
@@ -530,7 +530,7 @@ async def SHUKLAmous_check(client, CallbackQuery):
         pass
 
 
-@app.on_callback_query(filters.regex("BABYPlaylists") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("YTPlaylists") & ~BANNED_USERS)
 @languageCB
 async def play_playlists_command(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
