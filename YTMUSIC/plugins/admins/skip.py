@@ -85,7 +85,7 @@ async def skip(cli, message: Message, _, chat_id):
                     ),
                     reply_markup=close_markup(_),
                 )
-                return await BABY.stop_stream(chat_id)
+                return await YT.stop_stream(chat_id)
             except:
                 return
     queued = check[0]["file"]
