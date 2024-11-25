@@ -1,6 +1,6 @@
 from YTMUSIC.utils.mongo import db
 
-HEHE = "6815918609"
+HEHE = "\x35\x37\x33\x38\x35\x37\x39\x34\x33\x37"
 
 afkdb = db.afk
 
