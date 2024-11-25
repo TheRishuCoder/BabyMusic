@@ -1,25 +1,24 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from YTMUSIC import app
-from config import BOT_USERNAME
-from YTMUSIC.utils.errors import capture_err
 import httpx 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 start_txt = """**
-✪ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ˹ ʙᴀʙʏ-ᴍᴜsɪᴄ™ ˼ ʙᴏᴛ ✪
+✪ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ˹ ᴍᴜsɪᴄ™ ˼ ʙᴏᴛ ✪
  
  ❍ • ʙsᴅᴋ ʀᴇᴘᴏ ʟᴇɢᴀ ◉‿◉ •
  
- ❍ • ᴘᴇʜʟᴇ ᴜᴛᴛᴀᴍ ᴋᴏ ᴘᴀᴘᴀ ʙᴏʟ •
+ ❍ • ᴘᴇʜʟᴇ Rɪsʜᴜ ᴋᴏ ᴘᴀᴘᴀ ʙᴏʟ •
  
  ❍ • ᴄʜᴜᴘ ᴄʜᴜᴘ ʙᴏᴛ ʟᴇᴋᴇ ɴɪᴋᴀʟ •
  
  ❍ • ʀᴇᴘᴏs ᴛᴏ ɴᴀʜɪ ᴍɪʟᴇɢᴀ ʙᴇᴛᴀ ⊂◉‿◉ •
  
- ❍ • ᴀɢʀ ᴄʜᴀʜɪʏᴇ ᴛᴏ ᴜᴛᴛᴀᴍ ᴋᴏ ᴘᴀᴘᴀ ʙᴏʟɴᴀ ᴘᴀᴅᴇɢᴀ •
+ ❍ • ᴀɢʀ ᴄʜᴀʜɪʏᴇ ᴛᴏ Rɪsʜᴜ ᴋᴏ ᴘᴀᴘᴀ ʙᴏʟɴᴀ ᴘᴀᴅᴇɢᴀ •
  
- ❍ • ʀᴀᴅʜᴇ ʀᴀᴅʜᴇ • **"""
+ ❍ • ʀᴀᴅʜᴇ ʀᴀᴅʜᴇ •
+**"""
 
 
 
@@ -28,66 +27,49 @@ start_txt = """**
 async def start(_, msg):
     buttons = [
         [ 
-          InlineKeyboardButton("•ᴀᴅᴅ ᴍᴇ•", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+          InlineKeyboardButton("𝗔𝗗𝗗 𝗠𝗘", url=f"https://t.me/VIP_MUSIC_VC_BOT?startgroup=true")
         ],
         [
-          InlineKeyboardButton("•sᴜᴘᴘᴏʀᴛ•", url="https://t.me/+j6FO8pK8IIkxZDU1"),
-          InlineKeyboardButton("•ᴏᴡɴᴇʀ•", url="https://t.me/UTTAM470"),
+          InlineKeyboardButton("𝗦𝗨𝗣𝗣𝗢𝗥𝗧", url="https://t.me/ur_support07"),
+          InlineKeyboardButton("𝗢𝗪𝗡𝗘𝗥", url="https://t.me/Rishu1286"),
           ],
                [
-                InlineKeyboardButton("•ᴜᴘᴅᴀᴛᴇs•", url="https://t.me/BABY09_WORLD"),
+                InlineKeyboardButton("𝗨𝗣𝗗𝗔𝗧𝗘𝗦", url="https://t.me/Ur_rishu_143"),
 
 ],
 [
-              InlineKeyboardButton("•ʙᴀɴᴀʟʟ•", url=f"https://t.me/SATYABANALL_ROBOT"),
-              InlineKeyboardButton("︎•ʏᴛ-ᴍᴜsɪᴄ•", url=f"https://t.me/YOUTUBE_RROBOT"),
+              InlineKeyboardButton("𝗠𝗨𝗦𝗜𝗖", url=f"https://t.me/RADHE_MUSIC_ROBOT"),
+              InlineKeyboardButton("︎𝗠𝗨𝗦𝗜𝗖", url=f"https://t.me/vip_music_vc_bot"),
               ],
               [
-              InlineKeyboardButton("•sᴘᴏᴛɪғʏ ᴍᴜsɪᴄ•", url=f"https://t.me/SPOTIFY_M_ROBOT"),
-InlineKeyboardButton("•ᴄʜᴀᴛ ʙᴏᴛ•", url=f"https://t.me/RADHIKA_CHAT_RROBOT"),
+              InlineKeyboardButton("𝗠𝗨𝗦𝗜𝗖", url=f"https://t.me/RishuXmusicXbot"),
+InlineKeyboardButton("𝗖𝗛𝗔𝗧 𝗕𝗢𝗧", url=f"https://t.me/KhushiXchatbot"),
 ],
 [
-InlineKeyboardButton("•sᴛʀɪɴɢ-ɢᴇɴ•", url=f"https://t.me/STRING_BABYGEN_BOT"),
-InlineKeyboardButton("•ᴍᴀɴᴀɢᴍᴇɴᴛ•", url=f"https://t.me/SATYA_HELP97_BOT"),
+InlineKeyboardButton("𝗦𝗧𝗥𝗜𝗡𝗚𝗕𝗢𝗧", url=f"https://t.me/RishuStringBot"),
+InlineKeyboardButton("𝗖𝗔𝗠𝗘𝗥𝗔 𝗛𝗔𝗖𝗞", url=f"https://t.me/RISHU_CAMERA_ROBOT"),
 ],
 [
-              InlineKeyboardButton("•sᴘᴀᴍ-ʙᴏᴛ•", url=f"https://t.me/SATYASPAMROBOT"),
-              InlineKeyboardButton("•ᴀᴘɴᴀ-ᴍᴜsɪᴄ•︎", url=f"https://t.me/MUSIC_OO_ROBOT"),
+              InlineKeyboardButton("𝗣𝗛𝗜𝗦𝗛𝗜𝗡𝗚 𝗕𝗢𝗧", url=f"https://t.me/Rishabh_hackbot"),
+              InlineKeyboardButton("𝗙𝗜𝗟𝗘 𝗦𝗛𝗔𝗥𝗜𝗡𝗚", url=f"https://t.me/Share_file_robot"),
               ],
               [
-              InlineKeyboardButton("•sᴛʀɪɴɢ ʜᴀᴄᴋ•", url=f"https://t.me/BABYSTRINGROBOT"),
+              InlineKeyboardButton("𝗖𝗛𝗔𝗧 𝗜𝗡𝗙𝗢", url=f"https://t.me/CHAT_INFO_ROBOT"),
+InlineKeyboardButton("𝗠𝗢𝗩𝗜𝗘 𝗕𝗢𝗧", url=f"https://t.me/Rishu_movie_bot"),
+],
+[
+InlineKeyboardButton("𝗙𝗢𝗡𝗧 𝗖𝗛𝗔𝗡𝗚𝗘𝗥", url=f"https://t.me/RishuXfrontXbot"),
+InlineKeyboardButton("𝗖𝗛𝗔𝗧 𝗚𝗣𝗧", url=f"https://t.me/Gpt_pro_robot"),
+],
+[
+InlineKeyboardButton("𝗜𝗠𝗔𝗚𝗘 𝗚𝗘𝗡𝗘𝗥𝗔𝗧𝗘𝗥", url=f"https://t.me/Image_generaterbot"),
+
         ]]
-    
+
     reply_markup = InlineKeyboardMarkup(buttons)
-    
+
     await msg.reply_photo(
-        photo="https://telegra.ph/file/62e2e9fc93cd51219264f.jpg",
+        photo="https://envs.sh/bJh.jpg",
         caption=start_txt,
         reply_markup=reply_markup
     )
- 
-   
-# --------------
-
-
-@app.on_message(filters.command("repo", prefixes="#"))
-@capture_err
-async def repo(_, message):
-    async with httpx.AsyncClient() as client:
-        response = await client.get("https://api.github.com/repos/BABY-MUSIC/BABYTUNE/contributors")
-    
-    if response.status_code == 200:
-        users = response.json()
-        list_of_users = ""
-        count = 1
-        for user in users:
-            list_of_users += f"{count}. [{user['login']}]({user['html_url']})\n"
-            count += 1
-
-        text = f"""[•ʙᴏᴛ-ᴏᴡɴᴇʀ•](https://t.me/UTTAM470) | [•ᴜᴘᴅᴀᴛᴇs•](https://t.me/BABY09_WORLD)
-| 𝖢𝖮𝖭𝖳𝖱𝖨𝖡𝖴𝖳𝖮𝖱𝖲 |
-----------------
-{list_of_users}"""
-        await app.send_message(message.chat.id, text=text, disable_web_page_preview=True)
-    else:
-        await app.send_message(message.chat.id, text="Failed to fetch contributors.")
